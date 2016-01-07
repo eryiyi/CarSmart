@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="@color/gray_two"
+              android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:id="@+id/top_liner"
+                    android:layout_height="@dimen/height_top_bar">
+        <TextView android:layout_width="wrap_content"
+                  android:text="购物车"
+                  android:textColor="@color/black"
+                  android:textSize="18sp"
+                  android:layout_centerInParent="true"
+                  android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_alignParentLeft="true"
+                   android:layout_centerVertical="true"
+                   android:layout_marginLeft="10dp"
+                   android:onClick="back"
+                   android:src="@drawable/button_selector_back"
+                   android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:id="@+id/no_login"
+                    android:visibility="gone"
+                    android:layout_below="@+id/top_liner"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:id="@+id/liner_two"
+                    android:background="@color/white"
+                    android:layout_height="wrap_content">
+
+        <Button android:layout_width="wrap_content"
+                android:text="登陆"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:id="@+id/login"
+                android:background="@drawable/login"
+                android:padding="8dp"
+                android:layout_height="wrap_content"/>
+        <TextView android:layout_width="match_parent"
+                  android:padding="8dp"
+                  android:layout_toRightOf="@+id/login"
+                  android:text="你可以在登陆后同步电脑与手机购物车中的商品"
+                  android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_below="@+id/liner_two"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/liner_three"
+                    android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content"
+                       android:src="@drawable/gouwuche"
+                       android:id="@+id/car"
+                       android:layout_marginTop="20dp"
+                       android:layout_centerHorizontal="true"
+                       android:layout_height="wrap_content"/>
+            <RelativeLayout android:layout_width="wrap_content"
+                          android:layout_below="@+id/car"
+                          android:layout_marginTop="10dp"
+                          android:layout_centerHorizontal="true"
+                          android:background="@drawable/wouwuche_xia"
+                          android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content"
+                              android:text="购物车肚子空空"
+                              android:padding="14dp"
+                              android:textColor="@color/black"
+                              android:layout_centerHorizontal="true"
+                              android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout   android:layout_width="match_parent"
+                    android:id="@+id/is_login"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/top_liner"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+        <ListView
+                android:id="@+id/lstv"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/gray_line_color"
+                android:dividerHeight="0.5dp"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:smoothScrollbar="true"/>
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_alignParentBottom="true"
+                  android:background="@color/viewfinder_mask"
+                  android:layout_height="50dp">
+        <RelativeLayout android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+            <TextView android:layout_width="wrap_content"
+                      android:layout_marginLeft="8dp"
+                      android:textSize="16sp"
+                      android:text="合计：￥0.0"
+                      android:textStyle="bold"
+                      android:id="@+id/heji"
+                      android:gravity="center_vertical"
+                      android:textColor="@color/white"
+                      android:layout_height="match_parent"/>
+            <TextView android:layout_width="wrap_content"
+                      android:text="0"
+                      android:minHeight="20dp"
+                      android:minWidth="20dp"
+                      android:textSize="12sp"
+                      android:gravity="center"
+                      android:background="@drawable/button_shape_red_circle"
+                      android:textColor="@color/white"
+                      android:layout_marginTop="5dp"
+                      android:id="@+id/number"
+                      android:layout_marginRight="10dp"
+                      android:layout_alignParentRight="true"
+                      android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <TextView android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:text="去结算"
+                  android:textStyle="bold"
+                  android:textSize="16sp"
+                  android:id="@+id/qujiesuan"
+                  android:textColor="@color/white"
+                  android:gravity="center"
+                  android:background="@color/red_one"
+                  android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</RelativeLayout>

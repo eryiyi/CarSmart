@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:background="@color/white"
+                 android:layout_width="match_parent"
+                 android:layout_height="116dp">
+
+    <ImageView android:layout_width="100dp"
+               android:src="@drawable/head"
+               android:id="@+id/item_search_head"
+               android:layout_marginLeft="8dp"
+               android:layout_centerVertical="true"
+               android:layout_height="100dp"/>
+    <TextView android:layout_width="match_parent"
+              android:layout_toRightOf="@+id/item_search_head"
+              android:layout_marginTop="8dp"
+              android:padding="8dp"
+              android:textSize="15sp"
+              android:id="@+id/item_search_title"
+              android:ellipsize="end"
+              android:text="爱科技（AKG）K450偏斜旗舰款头戴耳机爱科技K450偏斜旗舰款头戴耳机爱科技（AKG）K450偏斜旗舰款头戴耳机"
+              android:layout_height="wrap_content"/>
+    <TextView android:layout_width="wrap_content"
+              android:textSize="16sp"
+              android:textColor="@color/red"
+              android:padding="5dp"
+              android:text="$1200.00"
+              android:id="@+id/item_search_money"
+              android:layout_toRightOf="@+id/item_search_head"
+              android:layout_below="@+id/item_search_title"
+              android:layout_height="wrap_content"/>
+    <TextView android:layout_width="wrap_content"
+              android:id="@+id/item_search_cont"
+              android:text="好评率90% 989人"
+              android:visibility="gone"
+              android:textSize="12sp"
+              android:layout_marginLeft="5dp"
+              android:padding="3dp"
+              android:layout_below="@+id/item_search_money"
+              android:layout_toRightOf="@+id/item_search_head"
+              android:layout_height="wrap_content"/>
+</RelativeLayout>

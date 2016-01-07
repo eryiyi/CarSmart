@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/gray_two"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:id="@+id/top_liner"
+                    android:layout_height="@dimen/height_top_bar">
+        <ImageView android:layout_width="25dp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_centerVertical="true"
+                   android:id="@+id/back"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   android:src="@drawable/button_selector_back"
+                   android:layout_height="25dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:text="意见反馈"
+                  android:textColor="@color/black"
+                  android:textSize="18sp"
+                  android:layout_centerInParent="true"
+                  android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <com.xiaolong.CarSmart.widget.ReboundScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:layout_height="match_parent">
+
+            <EditText
+                    android:id="@+id/publish_good_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="10dp"
+                    android:padding="15dp"
+                    android:background="@drawable/et_bule_bg"
+                    android:hint="标题"/>
+            <EditText
+                    android:id="@+id/publish_good_cont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200dp"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="top"
+                    android:paddingBottom="10dp"
+                    android:padding="15dp"
+                    android:background="@drawable/et_bule_bg"
+                    android:hint="内容"/>
+
+            <Button
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="确 定"
+                    android:onClick="save"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/button_selector_red_one"
+                    android:layout_width="match_parent">
+
+            </Button>
+        </LinearLayout>
+
+    </com.xiaolong.CarSmart.widget.ReboundScrollView>
+
+</LinearLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="@color/gray_two"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout android:layout_width="match_parent"
+              android:id="@+id/top_liner"
+              android:background="@color/white"
+              android:gravity="center_vertical"
+              android:textSize="18sp"
+              android:textColor="@color/black"
+              android:layout_height="@dimen/height_top_bar">
+        <ImageView android:layout_width="25dp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_centerVertical="true"
+                   android:id="@+id/back"
+                   android:layout_marginLeft="10dp"
+                   android:src="@drawable/button_selector_back"
+                   android:layout_height="25dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_centerInParent="true"
+                  android:text="商品详情"
+                  android:textSize="18sp"
+                  android:textColor="@color/black"
+                  android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:visibility="gone"
+                   android:layout_marginRight="10dp"
+                   android:layout_toLeftOf="@+id/more_select"
+                   android:src="@drawable/button_selector_time"
+                   android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_marginRight="10dp"
+                   android:layout_centerVertical="true"
+                   android:visibility="gone"
+                   android:id="@+id/more_select"
+                   android:layout_alignParentRight="true"
+                   android:src="@drawable/button_selector_more_select"
+                   android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <com.xiaolong.CarSmart.widget.ReboundScrollView
+            android:layout_width="match_parent"
+            android:id="@+id/scroll_view"
+            android:layout_below="@+id/top_liner"
+            android:layout_height="match_parent">
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+            <ImageView android:layout_width="match_parent"
+                       android:scaleType="fitXY"
+                       android:id="@+id/goods_pic"
+                       android:layout_height="200dp"/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_below="@+id/goods_pic"
+                      android:textSize="16sp"
+                      android:padding="8dp"
+                      android:id="@+id/goods_title"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_below="@+id/goods_title"
+                      android:padding="8dp"
+                      android:textSize="18sp"
+                      android:textColor="@color/red"
+                      android:id="@+id/goods_money"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/goods_money_market"
+                      android:layout_marginTop="5dp"
+                      android:layout_toRightOf="@id/goods_money"
+                      android:textSize="14sp"
+                      android:padding="8dp"
+                      android:textColor="@color/red"
+                      android:layout_below="@+id/goods_title"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/text_one"
+                      android:padding="8dp"
+                      android:text="已选"
+                      android:textColor="@color/black_text_color"
+                      android:layout_below="@+id/goods_money_market"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="match_parent"
+                      android:id="@+id/select_num"
+                      android:padding="8dp"
+                      android:textColor="@color/black_text_color"
+                      android:text="10"
+                      android:layout_marginLeft="10dp"
+                      android:layout_toRightOf="@+id/text_one"
+                      android:layout_below="@+id/goods_money_market"
+                      android:layout_height="wrap_content"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/msg_tishi"
+                      android:text="提示"
+                      android:padding="8dp"
+                      android:textColor="@color/black_text_color"
+                      android:layout_below="@+id/select_num"
+                      android:layout_height="wrap_content"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:text="七天无理由退货"
+                      android:padding="8dp"
+                      android:drawablePadding="8dp"
+                      android:textColor="#6679b3"
+                      android:layout_below="@+id/select_num"
+                      android:layout_toRightOf="@+id/msg_tishi"
+                      android:drawableLeft="@drawable/qitian"
+                      android:layout_height="wrap_content"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:text="评价晒单"
+                      android:textColor="@color/black_text_color"
+                      android:id="@+id/text_two"
+                      android:padding="8dp"
+                      android:layout_below="@+id/msg_tishi"
+                      android:layout_height="wrap_content"/>
+                <TextView android:layout_width="match_parent"
+                          android:padding="8dp"
+                          android:text="189人评价"
+                          android:id="@+id/comment_count"
+                          android:textColor="@color/black_text_color"
+                          android:layout_below="@+id/msg_tishi"
+                          android:layout_toRightOf="@+id/text_two"
+                          android:layout_height="wrap_content"/>
+                    <View android:layout_width="match_parent"
+                          android:background="@color/gray_line_color"
+                          android:id="@+id/liner_three"
+                          android:layout_below="@+id/comment_count"
+                          android:layout_height="0.3dp"></View>
+            <!--<ListView android:layout_width="match_parent"-->
+                      <!--android:layout_below="@+id/text_two"-->
+                      <!--android:layout_height="wrap_content">-->
+
+            <!--</ListView>-->
+                <!--<TextView android:layout_width="match_parent"-->
+                          <!--android:id="@+id/cont"-->
+                          <!--android:layout_marginTop="10dp"-->
+                          <!--android:textColor="@color/black_text_color"-->
+                          <!--android:layout_below="@+id/liner_three"-->
+                          <!--android:layout_height="wrap_content"/>-->
+                <WebView android:layout_width="match_parent"
+                         android:id="@+id/wvHtml"
+                         android:layout_below="@+id/liner_three"
+                         android:layout_height="wrap_content">
+
+                </WebView>
+
+        </RelativeLayout>
+    </com.xiaolong.CarSmart.widget.ReboundScrollView>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="50dp">
+        <TextView android:layout_width="0dp"
+                  android:text="关注"
+                  android:padding="5dp"
+                  android:id="@+id/goods_favour"
+                  android:drawableTop="@drawable/favour"
+                  android:textColor="@color/white"
+                  android:background="@color/dark_gray"
+                  android:gravity="center"
+                  android:layout_weight="1"
+                  android:layout_height="match_parent"/>
+        <RelativeLayout android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+            <TextView android:layout_width="match_parent"
+                      android:text="购物车"
+                      android:padding="5dp"
+                      android:drawableTop="@drawable/foot_four_n"
+                      android:id="@+id/goods_cart"
+                      android:textColor="@color/white"
+                      android:background="@color/dark_gray"
+                      android:gravity="center"
+                      android:layout_height="match_parent"/>
+            <TextView android:layout_width="wrap_content"
+                      android:text="10"
+                      android:minHeight="20dp"
+                      android:minWidth="20dp"
+                      android:textSize="12sp"
+                      android:gravity="center"
+                      android:background="@drawable/button_shape_red_circle"
+                      android:textColor="@color/white"
+                      android:layout_marginTop="5dp"
+                      android:id="@+id/number"
+                      android:layout_marginRight="10dp"
+                      android:layout_alignParentRight="true"
+                      android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <TextView android:layout_width="0dp"
+                  android:layout_weight="1.5"
+                  android:gravity="center"
+                  android:text="加入购物车"
+                  android:textSize="18sp"
+                  android:id="@+id/add_cart"
+                  android:textColor="@color/white"
+                  android:background="@color/red_one"
+                  android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>

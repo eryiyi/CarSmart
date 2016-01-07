@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/gray_two"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:id="@+id/top_liner"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_height="@dimen/height_top_bar">
+        <ImageView android:layout_width="25dp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_centerVertical="true"
+                   android:id="@+id/back"
+                   android:layout_marginLeft="10dp"
+                   android:src="@drawable/button_selector_back"
+                   android:layout_height="25dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_centerInParent="true"
+                  android:text="确认订单"
+                  android:textSize="18sp"
+                  android:textColor="@color/black"
+                  android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <com.xiaolong.CarSmart.widget.ReboundScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:layout_weight="1"
+                  android:layout_height="wrap_content">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:id="@+id/select_address_liner"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/order_nickname"
+                      android:padding="8dp"
+                      android:textColor="@color/black_text_color"
+                      android:textSize="16sp"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_toRightOf="@+id/order_nickname"
+                      android:id="@+id/order_phone"
+                      android:padding="8dp"
+                      android:textColor="@color/black_text_color"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:textColor="@color/black_text_color"
+                      android:padding="8dp"
+                      android:layout_centerVertical="true"
+                      android:layout_marginRight="20dp"
+                      android:id="@+id/order_address"
+                      android:layout_below="@+id/order_nickname"
+                      android:text="暂无收货地址"
+                      android:layout_height="wrap_content"/>
+            <ImageView android:layout_width="wrap_content"
+                       android:padding="8dp"
+                       android:id="@+id/select_address"
+                       android:layout_alignParentRight="true"
+                       android:layout_centerVertical="true"
+                       android:src="@drawable/button_selector_more"
+                       android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+            <ListView android:layout_width="match_parent"
+                      android:id="@+id/lstv"
+                      android:layout_marginTop="5dp"
+                      android:cacheColorHint="#00000000"
+                      android:divider="#19000000"
+                      android:dividerHeight="1dp"
+                      android:fadingEdge="none"
+                      android:layout_weight="1"
+                      android:fastScrollEnabled="false"
+                      android:footerDividersEnabled="false"
+                      android:headerDividersEnabled="false"
+                      android:smoothScrollbar="true"
+                      android:layout_height="wrap_content">
+            </ListView>
+
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/white"
+                            android:layout_height="60dp">
+                <TextView android:layout_width="wrap_content"
+                          android:text="支付及配送"
+                          android:textColor="@color/black_text_color"
+                          android:padding="8dp"
+                          android:layout_centerVertical="true"
+                          android:layout_height="wrap_content"/>
+                <TextView android:layout_width="wrap_content"
+                          android:text="点此选择付款方式"
+                          android:padding="5dp"
+                          android:id="@+id/order_pay_method"
+                          android:layout_marginRight="20dp"
+                          android:textColor="@color/black_text_color"
+                          android:layout_alignParentRight="true"
+                          android:layout_height="wrap_content"/>
+                <TextView android:layout_width="wrap_content"
+                          android:text="点此选择快递方式"
+                          android:padding="5dp"
+                          android:id="@+id/order_kuaidi"
+                          android:layout_below="@+id/order_pay_method"
+                          android:layout_marginRight="20dp"
+                          android:textColor="@color/black_text_color"
+                          android:layout_alignParentRight="true"
+                          android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <View android:layout_width="match_parent"
+                  android:background="@color/gray_two"
+                  android:layout_height="1dp">
+            </View>
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:background="@color/white"
+                            android:id="@+id/select_fapiao"
+                            android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content"
+                          android:text="发票信息"
+                          android:textColor="@color/black_text_color"
+                          android:padding="15dp"
+                          android:layout_height="wrap_content"/>
+                <TextView android:layout_width="wrap_content"
+                          android:text="不开发票"
+                          android:layout_alignParentRight="true"
+                          android:textColor="@color/black_text_color"
+                          android:padding="15dp"
+                          android:id="@+id/order_fapiao"
+                          android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        <EditText
+                android:id="@+id/postscript"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="5dp"
+                android:textSize="14sp"
+                android:paddingRight="5dp"
+                android:paddingBottom="10dp"
+                android:padding="15dp"
+                android:gravity="top"
+                android:background="@drawable/et_bule_bg"
+                android:hint="用户附言"/>
+    </LinearLayout>
+
+
+    </com.xiaolong.CarSmart.widget.ReboundScrollView>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:background="@color/dark_gray"
+                    android:layout_height="50dp">
+        <Button android:layout_width="100dp"
+                android:text="提交订单"
+                android:textStyle="bold"
+                android:id="@+id/order_sure"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button_selector_red_one"
+                android:textColor="@color/white"
+                android:layout_height="match_parent"/>
+        <TextView android:layout_width="wrap_content"
+                  android:textSize="16sp"
+                  android:text="快递："
+                  android:textStyle="bold"
+                  android:id="@+id/order_kuaidi_pay_title"
+                  android:layout_marginRight="5dp"
+                  android:layout_toLeftOf="@+id/order_kuaidi_pay"
+                  android:gravity="center"
+                  android:textColor="@color/white"
+                  android:layout_height="match_parent"/>
+        <TextView android:layout_width="wrap_content"
+                  android:textSize="16sp"
+                  android:text="￥20.00"
+                  android:textStyle="bold"
+                  android:id="@+id/order_kuaidi_pay"
+                  android:layout_marginRight="5dp"
+                  android:layout_toLeftOf="@+id/order_sure"
+                  android:gravity="center"
+                  android:textColor="@color/white"
+                  android:layout_height="match_parent"/>
+        <TextView android:layout_width="wrap_content"
+                  android:textSize="18sp"
+                  android:text="$1280.00"
+                  android:textStyle="bold"
+                  android:id="@+id/order_count"
+                  android:layout_marginRight="5dp"
+                  android:layout_toLeftOf="@+id/order_kuaidi_pay_title"
+                  android:gravity="center"
+                  android:textColor="@color/white"
+                  android:layout_height="match_parent"/>
+    </RelativeLayout>
+</LinearLayout>

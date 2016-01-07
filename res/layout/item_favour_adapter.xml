@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@drawable/zhuye_item_select"
+              android:layout_width="match_parent"
+              android:layout_height="116dp">
+        <ImageView android:layout_width="95dp"
+                   android:layout_marginLeft="10dp"
+                   android:id="@+id/item_pic"
+                   android:src="@drawable/head"
+                    android:layout_centerVertical="true"
+                   android:layout_height="100dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:id="@+id/item_title"
+                  android:padding="8dp"
+                  android:textSize="16sp"
+                  android:ellipsize="end"
+                  android:lineSpacingMultiplier="1.2"
+                  android:textColor="@color/black_text_color"
+                  android:layout_toRightOf="@+id/item_pic"
+                  android:text="这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题"
+                  android:layout_height="80dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:text="￥89.00"
+                  android:id="@+id/item_money"
+                  android:padding="8dp"
+                  android:layout_below="@+id/item_title"
+                  android:textSize="18sp"
+                  android:layout_toRightOf="@+id/item_pic"
+                  android:textColor="@color/red"
+                  android:layout_height="wrap_content"/>
+</RelativeLayout>

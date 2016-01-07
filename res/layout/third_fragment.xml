@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="@color/gray_two"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView android:layout_width="match_parent"
+              android:text="发现"
+              android:id="@+id/top_text"
+              android:background="@color/white"
+              android:gravity="center"
+              android:textSize="18sp"
+              android:textColor="@color/black"
+              android:layout_height="@dimen/height_top_bar"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/relati_one"
+                    android:background="@color/white"
+                    android:layout_below="@+id/top_text"
+                    android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content"
+                  android:textColor="@color/black"
+                  android:text="逛逛"
+                  android:layout_centerVertical="true"
+                  android:id="@+id/guangguang"
+                  android:textSize="18sp"
+                  android:padding="10dp"
+                  android:drawableLeft="@drawable/find_one"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="wrap_content"
+                  android:text="逛出精彩"
+
+                  android:layout_toRightOf="@+id/guangguang"
+                  android:gravity="center"
+                  android:layout_centerVertical="true"
+                  android:textSize="14sp"
+                  android:padding="12dp"
+                  android:layout_height="wrap_content"/>
+        <com.xiaolong.CarSmart.widget.CircleImageView
+                  android:layout_width="35dp"
+                  android:layout_toLeftOf="@+id/more_in"
+                  android:id="@+id/dt_pic"
+                  android:layout_centerVertical="true"
+                  android:layout_marginRight="8dp"
+
+                  android:src="@drawable/txhc"
+                  android:layout_height="35dp"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:id="@+id/more_in"
+                   android:layout_centerVertical="true"
+                   android:layout_marginRight="8dp"
+                   android:layout_alignParentRight="true"
+                   android:src="@drawable/button_selector_more"
+                   android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <TextView android:layout_width="match_parent"
+              android:layout_marginTop="20dp"
+              android:id="@+id/saoasao"
+              android:layout_below="@+id/relati_one"
+              android:gravity="center_vertical"
+              android:text="扫啊扫"
+              android:textSize="18sp"
+              android:drawableLeft="@drawable/find_two"
+              android:padding="10dp"
+              android:background="@color/white"
+              android:textColor="@color/black"
+              android:drawableRight="@drawable/button_selector_more"
+              android:layout_height="wrap_content"/>
+    <!--<TextView android:layout_width="match_parent"-->
+              <!--android:layout_marginTop="20dp"-->
+              <!--android:layout_below="@+id/saoasao"-->
+              <!--android:gravity="center_vertical"-->
+              <!--android:text="拍照购"-->
+              <!--android:drawableLeft="@drawable/find_three"-->
+              <!--android:textSize="18sp"-->
+              <!--android:id="@+id/paizhao"-->
+              <!--android:padding="10dp"-->
+              <!--android:background="@color/white"-->
+              <!--android:textColor="@color/black"-->
+              <!--android:drawableRight="@drawable/button_selector_more"-->
+              <!--android:layout_height="wrap_content"/>-->
+</RelativeLayout>

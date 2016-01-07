@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="@drawable/zhuye_item_select"
+              android:layout_width="90dp"
+              android:layout_height="100dp">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:id="@+id/liner"
+                    android:layout_height="80dp">
+        <ImageView android:layout_width="match_parent"
+                   android:src="@drawable/ad_pic_one"
+                   android:scaleType="centerCrop"
+                   android:id="@+id/item_index_foot_one_pic"
+                   android:layout_height="match_parent"/>
+        <TextView android:layout_width="wrap_content"
+                  android:text="8.8折"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="2dp"
+                  android:textSize="10sp"
+                  android:layout_alignParentBottom="true"
+                  android:background="@drawable/button_shape"
+                  android:textColor="@color/white"
+                  android:id="@+id/item_index_foot_one_zhekou"
+                  android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <TextView android:layout_width="match_parent"
+              android:text="$18.8"
+              android:layout_below="@+id/liner"
+              android:id="@+id/item_index_foot_one_title"
+              android:textColor="@color/black"
+              android:textSize="14sp"
+              android:gravity="center"
+              android:layout_height="20dp"/>
+
+</RelativeLayout>

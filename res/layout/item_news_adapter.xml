@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+                android:padding="8dp"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="116dp">
+    <!--<ImageView android:layout_width="100dp"-->
+               <!--android:id="@+id/item_pic"-->
+               <!--android:src="@drawable/head"-->
+               <!--android:layout_height="100dp"/>-->
+    <TextView android:layout_width="match_parent"
+               android:src="@drawable/head"
+              android:padding="8dp"
+               android:id="@+id/item_title"
+              android:text="这里是新闻标题"
+              android:textColor="@color/dark_gray"
+              android:textSize="16sp"
+               android:layout_height="wrap_content"/>
+    <TextView android:layout_width="match_parent"
+              android:id="@+id/item_cont"
+              android:textSize="14sp"
+              android:singleLine="true"
+              android:textColor="@color/dark_gray"
+              android:lineSpacingMultiplier="1.2"
+              android:text="新闻最新新闻新闻最新新闻最新新闻新闻最新新闻新闻最新新闻新闻最新新闻新闻最新新闻新闻最新新闻新闻最新新闻新闻最新新闻新闻新闻最新新闻新闻最新新闻新闻最新新闻新闻最新新闻新闻最新新闻新闻最新新闻"
+              android:layout_marginLeft="8dp"
+              android:layout_below="@+id/item_title"
+              android:layout_height="wrap_content"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_below="@+id/item_cont"
+              android:text="21012-02-05"
+              android:padding="8dp"
+              android:id="@+id/item_dateline"
+              android:layout_alignParentRight="true"
+              android:layout_height="wrap_content"/>
+</RelativeLayout>

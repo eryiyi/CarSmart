@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="@color/foot_gray"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:padding="8dp"
+                      android:id="@+id/foot_index"
+                      android:gravity="center"
+                      android:drawableTop="@drawable/foot_one_n"
+                      android:text="首页"
+                      android:layout_alignParentLeft="true"
+                      android:textColor="@color/white"
+                      android:layout_height="wrap_content"/>
+
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:padding="8dp"
+                      android:id="@+id/foot_type"
+                      android:layout_gravity="center"
+                      android:drawableTop="@drawable/foot_two_n"
+                      android:text="分类"
+                      android:gravity="center"
+                      android:textColor="@color/white"
+                      android:layout_height="wrap_content"/>
+
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:padding="8dp"
+                      android:id="@+id/foot_find"
+                      android:gravity="center"
+                      android:drawableTop="@drawable/foot_three_n"
+                      android:text="发现"
+                      android:textColor="@color/white"
+                      android:layout_height="wrap_content"/>
+
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:drawableTop="@drawable/foot_four_n"
+                      android:text="购物车"
+                      android:padding="8dp"
+                      android:id="@+id/foot_goods"
+                      android:textColor="@color/white"
+                      android:layout_height="wrap_content"/>
+
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:id="@+id/foot_mine"
+                      android:gravity="center"
+                      android:drawableTop="@drawable/foot_five_n"
+                      android:text="我的"
+                      android:padding="8dp"
+                      android:layout_alignParentRight="true"
+                      android:textColor="@color/white"
+                      android:layout_height="wrap_content"/>
+
+</LinearLayout>
